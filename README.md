@@ -1,7 +1,15 @@
-# Github API Integration Site
+# Github API Integration
 
+## [Angular 5](https://angular.io/) + [Angular Material](https://material.angular.io/) + [Angular Cli](https://cli.angular.io/) + [Github API](https://developer.github.com/v3/)
 
-## Warning: I Experienced issue that Github API returns PR still remain in open state during 5 minutes after merge pull request success.
+Application can 
+
+1. list commits for certain git repository on github
+2. list open pull requests.
+3. merge open pull request.
+4. list closed pull request.
+
+### Warning: I Experienced issue that Github API returns PR still remain in open state during 5 minutes after merge pull request success.
 
 
 # One way to check the site
