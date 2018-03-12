@@ -1,7 +1,7 @@
 # Github API Integration Site
 
 
-# Warning: I Experienced issue that Github API returns PR still remain in open state during 5 minutes after merge pull request success.
+## Warning: I Experienced issue that Github API returns PR still remain in open state during 5 minutes after merge pull request success.
 
 
 # One way to check the site
