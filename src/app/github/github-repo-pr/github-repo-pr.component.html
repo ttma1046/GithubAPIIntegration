@@ -1,0 +1,20 @@
+<mat-table #table [dataSource]="pullrequests" matSort>
+  <ng-container matColumnDef="title">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Title </mat-header-cell>
+    <mat-cell *matCellDef="let pullrequest">{{pullrequest.title}}</mat-cell>
+  </ng-container>
+    <ng-container matColumnDef="state">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> State </mat-header-cell>
+    <mat-cell *matCellDef="let pullrequest">{{pullrequest.state}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="body">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Message </mat-header-cell>
+    <mat-cell *matCellDef="let pullrequest">{{pullrequest.body}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="merge">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Merge Pull Request </mat-header-cell>
+    <mat-cell *matCellDef="let pullrequest"><button mat-raised-button color="primary" (click)="mergePR(pullrequest.number, pullrequest.head.sha)">Merge</button></mat-cell>
+  </ng-container>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

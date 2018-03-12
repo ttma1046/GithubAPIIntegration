@@ -1,0 +1,16 @@
+<mat-table #table [dataSource]="commits" matSort>
+  <ng-container matColumnDef="authorfullname">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Author's Full Name </mat-header-cell>
+    <mat-cell *matCellDef="let commit">{{commit.commit.author.name}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="created_at">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Create Date </mat-header-cell>
+    <mat-cell *matCellDef="let commit">{{commit.commit.committer.date | date: 'dd/MM/yyyy'}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="message">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Message </mat-header-cell>
+    <mat-cell *matCellDef="let commit">{{commit.commit.message}}</mat-cell>
+  </ng-container>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
